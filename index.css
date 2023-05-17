@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(7, 7, 6);
-    color: chocolate;
+    background-color: rgb(28, 40, 51);
+    color:chocolate
 }
 
 .welcome {
@@ -10,14 +10,17 @@ body {
     position: relative;
     top: 2px;
     font-weight: bolder;
-    color: rgb(90, 62, 25);
-    font-size: 20px;
+    color: rgb(177, 119, 42);
+    font-size: 35px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
 }
 
 .container {
     margin-top: 80px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-radius: 2%;
 }
 
 h1 {
@@ -27,14 +30,13 @@ h1 {
     height: 50px;
     font-style: italic;
     text-align: center;
+   
 }
 
-.mixed {
-    background-color: rgb(18, 10, 10);
+
     
-    /* position: sticky; */
-    top: 0;
-}
+  
+
 section{
     text-align: center;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -42,5 +44,6 @@ section{
    width: 60%;
  margin-left: 200px;
  margin-top: 80px;
+ color: rgb(227, 156, 4);
   
 }

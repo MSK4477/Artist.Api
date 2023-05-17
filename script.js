@@ -17,11 +17,11 @@ async function bar() {
 
   var div1 = document.createElement("div");
   div1.setAttribute("class", "welcome");
-  div1.innerHTML = "Welcome";
+  div1.innerHTML = "Welcome!!";
   document.body.append(div1);
 
   var h1 = document.createElement("h1");
-  h1.innerHTML = "Artists and Their Art Details";
+  h1.innerHTML = "Artists and Their Art Details....";
   document.body.append(h1);
 
   var div3 = document.createElement("div");
@@ -53,7 +53,7 @@ async function bar() {
 
     let section = document.createElement("section");
     section.setAttribute("id", res[i].artist_titles);
-    section.innerHTML = `
+    section.innerHTML += `
       <div>
         <div>Name: ${res[i].artist_titles}</div>
         <div>Category: ${res[i].category_titles}</div>
