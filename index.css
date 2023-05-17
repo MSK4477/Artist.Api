@@ -32,7 +32,7 @@ h1 {
 .mixed {
     background-color: rgb(18, 10, 10);
     
-    position: sticky;
+    /* position: sticky; */
     top: 0;
 }
 section{
@@ -41,6 +41,6 @@ section{
    background-color: #f1f1f1;
    width: 60%;
  margin-left: 200px;
- margin-top: 30px;
+ margin-top: 80px;
   
 }

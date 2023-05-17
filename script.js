@@ -2,74 +2,73 @@
 //  .then((data)=>data.json())
 //  .then((data1)=>console.log(data1))
 //  console.log(p)
-var div = document.createElement("div")
+var div = document.createElement("div");
+
 async function bar() {
-   var p1 = await fetch("https://api.artic.edu/api/v1/artworks");
-   p1 = await p1.json()
-   let res = p1.data
-   console.log(p1);
-   const artistNames = []
-   for (let i = 0; i < res.length; i++) {
-      artistNames.push(res[i].artist_titles)
-   }
-   console.log(artistNames)
-   var div1 = document.createElement("div")
-   div1.setAttribute("class", 'welcome')
-   div1.innerHTML = "Welcome"
-   document.body.append(div1)
+  var p1 = await fetch("https://api.artic.edu/api/v1/artworks");
+  p1 = await p1.json();
+  let res = p1.data;
+  console.log(p1);
+  const artistNames = [];
+  for (let i = 0; i < res.length; i++) {
+    artistNames.push(res[i].artist_titles);
+  }
+  console.log(artistNames);
 
-   h1 = document.createElement("h1")
-   h1.innerHTML = "Artists and Their Art Details"
+  var div1 = document.createElement("div");
+  div1.setAttribute("class", "welcome");
+  div1.innerHTML = "Welcome";
+  document.body.append(div1);
 
-var div3=document.createElement("div")
-div3.setAttribute("class","mixed")
+  var h1 = document.createElement("h1");
+  h1.innerHTML = "Artists and Their Art Details";
+  document.body.append(h1);
 
-   var container = document.createElement("div")
-   container.setAttribute("class", "container")
+  var div3 = document.createElement("div");
+  div3.setAttribute("class", "mixed");
 
-   var row = document.createElement("div")
-   row.setAttribute('class', "row")
+  var container = document.createElement("div");
+  container.setAttribute("class", "container");
 
-   container.append(row)
+  var row = document.createElement("div");
+  row.setAttribute("class", "row");
 
-   for (let i = 0; i < artistNames.length; i++) {
+  container.append(row);
 
-      row.innerHTML += `<div class="col-md-3">
-<ul>
-<li><a href="#${artistNames[i]}">${artistNames[i]}</a></li>
-</ul>
- </div>`
+  for (let i = 0; i < artistNames.length; i++) {
+    row.innerHTML += `
+      <div class="col-md-3">
+        <ul>
+          <li><a href="#${artistNames[i]}">${artistNames[i]}</a></li>
+        </ul>
+      </div>
+    `;
 
- div3.append(h1,container)
+    div3.append(container);
+    document.body.append(div3);
+  }
 
- document.body.append(div3);
+  for (let i = 0; i < res.length; i++) {
+    console.log(res[i].artist_titles);
 
-   }
+    let section = document.createElement("section");
+    section.setAttribute("id", res[i].artist_titles);
+    section.innerHTML = `
+      <div>
+        <div>Name: ${res[i].artist_titles}</div>
+        <div>Category: ${res[i].category_titles}</div>
+        <div>Title: ${res[i].title}</div>
+        <div>Material: ${res[i].material_titles}</div>
+        <div>Origin: ${res[i].place_of_origin}</div>
+      </div>
+    `;
 
- for (let i = 0; i < res.length; i++) {
+    document.body.append(section);
+  }
+}
 
-   console.log(res[i].artist_titles)
+bar();
 
- let main=document.createElement("main")
 
- let section=document.createElement("section")
- 
- section.setAttribute("id",res[i].artist_titles)
- section.innerHTML =`<div>
- 
- <div>Name: ${res[i].artist_titles}!!<div>
- <div>Category: ${res[i].category_titles }</div>
- <div>Title: ${res[i].title }</div>
- <div>Material: ${res[i].material_titles }</div>
- <div>Origin: ${res[i].place_of_origin}</div>
- 
- `
- 
-      main.append(section)
-      document.body.append(main);
-     
- }
- 
-}bar()
 
 
