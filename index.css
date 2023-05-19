@@ -47,3 +47,10 @@ section{
  color: rgb(227, 156, 4);
   
 }
+.row a{
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    background-color: #f1f1f1;
+}
