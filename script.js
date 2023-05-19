@@ -24,8 +24,8 @@ async function bar() {
   h1.innerHTML = "Artists and Their Art Details....";
   document.body.append(h1);
 
-  var div3 = document.createElement("div");
-  div3.setAttribute("class", "mixed");
+  // var div3 = document.createElement("div");
+  // div3.setAttribute("class", "mixed");
 
   var container = document.createElement("div");
   container.setAttribute("class", "container");
@@ -44,8 +44,8 @@ async function bar() {
       </div>
     `;
 
-    div3.append(container);
-    document.body.append(div3);
+    // div3.append(container);
+    document.body.append(container);
   }
 
   for (let i = 0; i < res.length; i++) {
